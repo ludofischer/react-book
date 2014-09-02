@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "react": "~0.11.1",
+    "pikaday": "~1.2.0"
+  },
+  "devDependencies": {
+    "jsx-loader": "~0.11.0",
+    "webpack": "~1.4.0-beta2"
+  }
+}
