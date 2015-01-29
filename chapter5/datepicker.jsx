@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 var React = require('react');
 var Pikaday = require('pikaday');
 
@@ -27,7 +25,7 @@ var DatePicker = React.createClass({
    }
 });
 
-React.renderComponent(<DatePicker firstDay={1}/>, document.getElementById('datePicker'));
+React.render(<DatePicker firstDay={1}/>, document.getElementById('datePicker'));
 setTimeout(function() {
   React.unmountComponentAtNode(document.getElementById('datePicker'));                                                              
 }, 3000);
