@@ -1,0 +1,44 @@
+{
+  "name": "fixed-data-table-demo",
+  "version": "1.0.0",
+  "description": "A demo for FixedDataTable (http://facebook.github.io/fixed-data-table/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ludovicofischer/react-book"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Ludovico Fischer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ludovicofischer/react-book/issues"
+  },
+  "homepage": "https://github.com/ludovicofischer/react-book",
+  "dependencies": {
+    "fixed-data-table": "^0.1.0",
+    "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "eslint": "^0.13.0",
+    "eslint-loader": "^0.2.1",
+    "jsx-loader": "^0.12.2"
+  },
+
+  "eslintConfig": {
+       "ecmaFeatures": {
+          "jsx": true
+       },
+      "rules": {
+          "quotes": [0, "single"],
+          "strict": 0
+      },
+      "env": {
+          "browser": true
+      }
+  }
+}
