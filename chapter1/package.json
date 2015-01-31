@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "react": "~0.12.0"
+    "react": "^0.13.0-beta.1"
   },
   "devDependencies": {
-    "jsx-loader": "~0.12.0",
-    "webpack": "~1.4.10"
+    "jsx-loader": "../jsx-loader",
+    "webpack": "^1.5.3"
   }
 }
