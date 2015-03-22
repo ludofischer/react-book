@@ -8,26 +8,26 @@ var Table = FixedDataTable.Table;
 
 var Column = FixedDataTable.Column;
 
-var TableControl = React.createClass({
-    getInitialState: function() {
-        return {
-            rows: [{recipe: 'chocolate', size: 'L', date: new Date('2015-03-18')},
-                   {recipe: 'strawberry', size: 'M', date: new Date('2015-03-20')},
-                   {recipe: 'banana', size: 'M', date: new Date('2015-03-20')}]
-        };
-    },
+class TableControl {
+    constructor() {
 
-    sortByRecipe: function() {
+         this.state = {rows: [{recipe: 'chocolate', size: 'L', date: new Date('2015-03-18')},
+                   {recipe: 'strawberry', size: 'M', date: new Date('2015-03-20')},
+                   {recipe: 'banana', size: 'M', date: new Date('2015-03-20')}]};
+
+    }
+
+    sortByRecipe() {
         this.setState({rows: this.state.rows.sort(function(a, b) {
             return a.recipe.localeCompare(b.recipe);
         })});
-    },
+    }
 
-    getRow: function(rowIndex) {
+    getRow(rowIndex) {
         return this.state.rows[rowIndex];
-    },
+    }
 
-    render: function() {
+    render() {
         var tableControl = this;
         var recipeHeaderRenderer = function() {
 
@@ -36,11 +36,11 @@ var TableControl = React.createClass({
 
         return (<Table
       maxHeight={300}
-            width={400}
-            rowsCount={this.state.rows.length}
-            rowHeight={50}
-            headerHeight={40}
-            rowGetter={this.getRow}>
+      width={400}
+      rowsCount={this.state.rows.length}
+      rowHeight={50}
+      headerHeight={40}
+      rowGetter={this.getRow.bind(this)}>
     <Column dataKey="recipe"
              width={100}
              flexGrow={1}
@@ -52,14 +52,14 @@ var TableControl = React.createClass({
              flexGrow={2}
     label="Size"/>
 
-<Column dataKey="date"
+    <Column dataKey="date"
          width={100}
          label="Date"
          cellRenderer={function(cellData) {return new Intl.DateTimeFormat().format(cellData); }}/>
     </Table>
         );
     }
-});
+}
 
 React.render(
     <TableControl/>,
