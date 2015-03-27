@@ -1,16 +1,19 @@
 module.exports = {
     entry: './src/wordcount.jsx',
-
     output: {
-      path: 'build',
-      filename: 'wordcount.js'
+        path: __dirname,
+        filename: 'build/wordcount.js'
     },
-
-    resolve: {
-      extensions: ['', '.js', '.jsx']
-    },
-
     module: {
-        loaders: [{test: /\.jsx$/, loader: 'jsx-loader'}]
+        loaders: [
+            {test: /.jsx$/, loader: 'jsx-loader'}
+        ],
+        preLoaders: [
+            {
+                test: [/\.jsx$/, /.js$/],
+                exclude: /node_modules/,
+                loader: 'eslint-loader'
+            },
+        ]
     }
 };

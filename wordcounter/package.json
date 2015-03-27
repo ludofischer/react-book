@@ -1,9 +1,22 @@
 {
+  "name": "gra",
+  "version": "1.0.0",
+  "description": "Count words",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -d"
+  },
+  "author": "Ludovico Fischer",
+  "license": "MIT",
   "dependencies": {
-    "react": "^0.13.0-beta.1"
+    "react": "^0.13.1",
+    "react-tools": "^0.13.1",
+    "jsx-loader": "^0.12.2"
   },
   "devDependencies": {
-    "jsx-loader": "../jsx-loader",
-    "webpack": "^1.5.3"
+    "eslint": "^0.17.1",
+    "eslint-loader": "^0.7.0",
+    "eslint-plugin-react": "^1.6.0",
+    "webpack": "^1.7.3"
   }
 }

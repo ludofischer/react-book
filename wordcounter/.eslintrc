@@ -1,0 +1,17 @@
+{
+    "plugins": ["react"],
+    "ecmaFeatures": {
+        "jsx": true,
+        "classes": true
+    },
+    "env": {
+        "browser": true,
+        "node": true
+     },
+    "rules": {
+        "quotes": [0, "single"],
+        "strict": 0,
+        "react/jsx-uses-vars": 1,
+        "react/jsx-uses-react": 1
+    }
+}

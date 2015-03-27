@@ -1,6 +1,6 @@
 React = require('react');
 
-var SaveButton = React.createClass({
+var SaveButton = function() { return {
     getInitialState: function() {
         return {success: false};
     },
@@ -16,12 +16,13 @@ var SaveButton = React.createClass({
                 <strong>Success!</strong> Text succesfully saved.
                 </div>
                 {this.props.children}
-                <button type="button" className="btn btn-primary" onClick={this.save}> 
+                <button type="button" className="btn btn-primary" onClick={this.save}>
                 Save
                 </button>
                 </div>
                )
     }
-});
+}
+};
 
 module.exports = SaveButton;
