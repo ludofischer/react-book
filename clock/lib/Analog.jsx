@@ -1,13 +1,7 @@
 var React = require('react');
 
-var ClockFace = React.createClass({
-    propTypes: {
-        date: React.PropTypes.instanceOf(Date),
-        minor: React.PropTypes.array,
-        major: React.PropTypes.array
-    },
-
-    render: function() {
+class ClockFace {
+    render() {
         var minorLength = this.props.minor.length;
         var majorLength = this.props.major.length;
         var date = this.props.date;
@@ -35,8 +29,8 @@ var ClockFace = React.createClass({
                                       this.props.major.map(function(i) {
                                           var key = 'major-' + i;
                                           return (
-                                              <line key={key} className='major' y1='35' y2='45' transform={'rotate(' +  (360 * i / majorLength) + ')'}/>
-                                          )
+                                              <line key={key} className='major' y1='35' y2='45' transform={'rotate(' + (360 * i / majorLength) + ')'}/>
+                                          );
                                       })
                                       }
 
@@ -59,7 +53,12 @@ var ClockFace = React.createClass({
             </div>
         );
     }
-});
+}
 
+ClockFace.propTypes = {
+    date: React.PropTypes.instanceOf(Date),
+    minor: React.PropTypes.array,
+    major: React.PropTypes.array
+};
 
 module.exports = ClockFace;

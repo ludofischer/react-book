@@ -1,12 +1,8 @@
 var React = require('react');
 
 
-var DigitalClock = React.createClass({
-    propTypes: {
-        date: React.PropTypes.instanceOf(Date)
-    },
-
-    componentWillMount: function() {
+class DigitalClock {
+    componentWillMount() {
         this.dateFormat = new Intl.DateTimeFormat('en-GB', {
             year: 'numeric',
             weekday: 'long',
@@ -18,10 +14,9 @@ var DigitalClock = React.createClass({
             minute: 'numeric',
             second: 'numeric'
         });
-    },
+    }
 
-    render: function() {
-
+    render() {
         return (
             <div className="left">
                 <p>
@@ -34,6 +29,10 @@ var DigitalClock = React.createClass({
             </div>
         );
     }
-});
+}
+
+DigitalClock.propTypes = {
+        date: React.PropTypes.instanceOf(Date)
+};
 
 module.exports = DigitalClock;

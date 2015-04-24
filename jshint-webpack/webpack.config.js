@@ -19,7 +19,8 @@ module.exports = {
         ]
     },
     jshint: {
-        failOnHint: false
+        emitErrors: false,
+        failOnHint: true
     },
     eslint: {
         emitErrors: false

@@ -1,6 +1,6 @@
 var React = require('react');
-var ProgressBar = require('./ProgressBar.jsx');
-var Counter = require('./Counter.jsx');
+var ProgressBar = require('./lib/ProgressBar.jsx');
+var Counter = require('./lib/Counter.jsx');
 
 var Editor = function() {
     this.state = {text: ''};
@@ -11,7 +11,6 @@ Editor.prototype = Object.create(React.Component.prototype);
 
 Editor.prototype.handleChange = function(event) {
     this.setState({text: event.target.value});
-    this.forceUpdate();
 };
 
 Editor.prototype.render = function() {

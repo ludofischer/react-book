@@ -8,12 +8,13 @@ var Table = FixedDataTable.Table;
 
 var Column = FixedDataTable.Column;
 
-class TableControl {
+class TableControl extends React.Component {
     constructor() {
 
          this.state = {rows: [{recipe: 'chocolate', size: 'L', date: new Date('2015-03-18')},
                    {recipe: 'strawberry', size: 'M', date: new Date('2015-03-20')},
-                   {recipe: 'banana', size: 'M', date: new Date('2015-03-20')}]};
+                              {recipe: 'banana', size: 'M', date: new Date('2015-03-20')}]};
+        this.sortByRecipe = this.sortByRecipe.bind(this);
 
     }
 
@@ -28,11 +29,10 @@ class TableControl {
     }
 
     render() {
-        var tableControl = this;
         var recipeHeaderRenderer = function() {
 
-            return (<div onClick={tableControl.sortByRecipe}>Recipe</div>);
-        };
+            return (<div onClick={this.sortByRecipe}>Recipe</div>);
+        }.bind(this);
 
         return (<Table
       maxHeight={300}

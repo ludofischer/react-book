@@ -1,8 +1,8 @@
 module.exports = {
-    entry: './src/wordcount.jsx',
+    entry: './index.jsx',
     output: {
         path: __dirname,
-        filename: 'build/wordcount.js'
+        filename: 'bundle.js'
     },
     module: {
         loaders: [
