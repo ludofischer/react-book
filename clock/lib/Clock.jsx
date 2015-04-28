@@ -6,6 +6,7 @@ var range = require('lodash.range');
 
 class Clock extends React.Component {
     constructor() {
+        super();
         this.state = {date: new Date()};
     }
 

@@ -6,13 +6,13 @@ module.exports = {
     },
     module: {
         loaders: [
-            {test: /.jsx$/, loader: 'jsx-loader'}
+            {test: /.jsx$/, loader: 'babel-loader'}
         ],
         preLoaders: [
             {
                 test: [/\.jsx$/, /.js$/],
                 exclude: /node_modules/,
-                loader: 'eslint-loader'
+                loader: 'babel-loader'
             },
         ]
     }
