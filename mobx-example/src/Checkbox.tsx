@@ -1,5 +1,5 @@
 /* START:definiition */
-import React from 'react';
+import * as React from 'react';
 import PropTypes from 'prop-types';
 
 /* START:body */
