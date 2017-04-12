@@ -1,11 +1,10 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { observer } from 'mobx-react';
 import Store from './Store';
 import MovieBox from './MovieBox';
 import LoadingIndicator from './LoadingIndicator';
 
-function MovieList({ store, date }) {
+function MovieList({ store, date } : {store: Store, date: string}) {
   const movieBoxes = store.moviesForDate(date).map(movie => (
     <li key={movie.title}><MovieBox movie={movie} /></li>
   ));
@@ -20,11 +19,6 @@ function MovieList({ store, date }) {
     </div>
   );
 }
-
-MovieList.propTypes = {
-  store: PropTypes.instanceOf(Store),
-  date: PropTypes.string.isRequired
-};
 
 
 export default observer(MovieList);

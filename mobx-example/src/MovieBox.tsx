@@ -1,7 +1,6 @@
 /* START:definition */
 /* START:import */
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import { observer } from "mobx-react";
 
 import Movie from './Movie';
@@ -10,9 +9,9 @@ import Checkbox from './Checkbox';
 export default observer(MovieBox);
 /* END:definition */
 /* END:body */
-function MovieBox({ movie }) {
+function MovieBox({ movie }: {movie: Movie}) {
   /* END:definition */
-  function onChange(checked) {
+  function onChange(checked: boolean) {
     if (checked) {
       movie.favorite = true;
     } else {
@@ -34,7 +33,3 @@ function MovieBox({ movie }) {
   );
   /* START:definition */
 }
-
-MovieBox.propTypes = {
-  movie: PropTypes.instanceOf(Movie),
-};

@@ -7,8 +7,8 @@
   "scripts": {
     "test": "jest --watch",
     "library:build": "webpack --config webpack.config.library.js",
-    "start": "cross-env NODE_ENV=development webpack-dev-server -d --open",
-    "build": "cross-env NODE_ENV=production  webpack -p --devtool source-map"
+    "start": "NODE_ENV=development webpack-dev-server -d",
+    "build": "NODE_ENV=production  webpack -p --devtool source-map"
   },
   "author": "Ludovico Fischer",
   "license": "ISC",
@@ -17,9 +17,6 @@
     "@types/react-dom": "^0.14.23",
     "awesome-typescript-loader": "^3.1.2",
     "babel-loader": "^6.3.2",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-react-app": "^2.1.0",
-    "cross-env": "^4.0.0",
     "enzyme": "^2.8.0",
     "jest": "^19.0.0",
     "react-test-renderer": "^15.5.0",

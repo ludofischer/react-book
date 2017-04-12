@@ -1,4 +1,4 @@
-export function requestMovies() {
+export function requestMovies(): Promise<Array<{title: string, date: string}>> {
   return new Promise(resolve =>
     setTimeout(
       () =>

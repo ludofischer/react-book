@@ -1,12 +1,11 @@
 /* START:definiition */
 import * as React from 'react';
-import PropTypes from 'prop-types';
 
 /* START:body */
-export default function Checkbox({ checked, onChange, name, label, id }) {
+export default function Checkbox({ checked, onChange, name, label, id }: {checked: boolean, onChange: (c: boolean) => void, name: string, label: string, id: string}) {
   /* START_HIGHLIGHT */
   /* END:definition */
-  function onCheck(event) {
+  function onCheck(event: React.ChangeEvent<HTMLInputElement>) {
     onChange(event.target.checked);
   }
 
@@ -27,10 +26,3 @@ export default function Checkbox({ checked, onChange, name, label, id }) {
 /* END_HIGHLIGHT */
 /* END:body */
 /* END:definition */
-Checkbox.propTypes = {
-  checked: PropTypes.bool.isRequired,
-  onChange: PropTypes.func.isRequired,
-  name: PropTypes.string,
-  label: PropTypes.string,
-  id: PropTypes.string
-};

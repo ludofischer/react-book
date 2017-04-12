@@ -1,4 +1,5 @@
 import { observable, computed } from 'mobx';
+import Movie from './Movie';
 
 export default class Store {
   @observable
@@ -6,7 +7,7 @@ export default class Store {
   @observable
   loading = false;
   @observable
-  movies = [];
+    movies: Array<Movie> = [];
 
   @computed
   get filteredMovies() {
@@ -15,7 +16,7 @@ export default class Store {
     }
     return this.movies;
   }
-  moviesForDate(day) {
-    return this.filteredMovies.filter(m => m.date === day);
+    moviesForDate(day: string) {
+    return this.filteredMovies.filter(m => m.day === day);
   }
 }
