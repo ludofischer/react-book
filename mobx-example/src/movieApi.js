@@ -1,3 +1,4 @@
+// @flow
 export function requestMovies() {
   return new Promise(resolve =>
     setTimeout(

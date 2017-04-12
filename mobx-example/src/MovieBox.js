@@ -1,3 +1,4 @@
+//  @flow
 /* START:definition */
 /* START:import */
 import React from 'react';

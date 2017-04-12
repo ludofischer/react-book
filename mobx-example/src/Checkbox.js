@@ -1,9 +1,18 @@
+// @flow
 /* START:definiition */
 import React from 'react';
 import PropTypes from 'prop-types';
 
+type CheckboxProps = {
+  checked: boolean,
+  onChange: (x: boolean) => void,
+  name: string,
+  label: string,
+  id: string
+}
+
 /* START:body */
-export default function Checkbox({ checked, onChange, name, label, id }) {
+export default function Checkbox({ checked, onChange, name, label, id }: CheckboxProps) {
   /* START_HIGHLIGHT */
   /* END:definition */
   function onCheck(event) {
